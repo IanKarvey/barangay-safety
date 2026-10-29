@@ -1,0 +1,8 @@
+// Basic smoke test for Barangay Safety App.
+import 'package:flutter_test/flutter_test.dart';
+
+void main() {
+  test('Smoke test placeholder', () {
+    expect(1 + 1, 2);
+  });
+}

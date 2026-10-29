@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+
+        // Flutter's Windows embedder headers. `generated_plugin_registrant.cc`
+        // pulls in flutter_plugin_registrar.h from here, and it lives in the
+        // SDK cache rather than in this repo — which is why every #include in
+        // that generated file showed red while the code itself was fine.
+        //
+        // Machine-specific path. If the Flutter SDK moves, update this or the
+        // squiggles come back. Nothing about the Android build depends on it.
+        "C:/flutter/bin/cache/artifacts/engine/windows-x64",
+
+        // Plugin headers are symlinked here by `flutter build windows`. The
+        // recursive workspace glob above usually reaches them, but naming the
+        // directory explicitly is more reliable.
+        "${workspaceFolder}/windows/flutter/ephemeral/.plugin_symlinks/*/windows/include"
+      ],
+      "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "windows-gcc-x64",
+      "compilerArgs": [
+        ""
+      ]
+    }
+  ],
+  "version": 4
+}

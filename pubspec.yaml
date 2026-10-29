@@ -1,0 +1,110 @@
+name: barangay_safety_app
+description: Barangay Safety Incident Reporting Application with Geo-Tagging and Interactive Maps for Selected High-Density Barangays in Lipa City.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Supabase
+  supabase_flutter: ^2.3.0
+
+  # State Management
+  provider: ^6.1.1
+
+  # Maps
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.0
+
+  # Location / GPS
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+
+  # Image Picker
+  image_picker: ^1.0.7
+
+  # Local Storage
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+
+  # UI Utilities
+  intl: ^0.19.0
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  fl_chart: ^0.66.2
+
+  # Shrink-to-fit text — see lib/widgets/app_text.dart. Backs the project-wide
+  # fix for text breaking mid-word instead of wrapping/scaling/truncating.
+  auto_size_text: ^3.0.0
+
+  # Utilities
+  uuid: ^4.3.3
+  path: ^1.9.0
+  mime: ^1.0.5
+
+  # §4.3 — perceptual image hashing (dHash) for duplicate photo detection.
+  # Pure Dart decode; no native dependency.
+  image: ^4.1.7
+  # Writes the .xlsx export (an .xlsx is a zip of XML). Already in the app via
+  # `image`; declared here because the export imports it directly.
+  archive: ^4.0.0
+  url_launcher: ^6.2.4
+  video_player: ^2.8.2
+
+  # PDF Export
+  pdf: ^3.10.8
+  printing: ^5.12.0
+
+  # Local Notifications + Permissions
+  flutter_local_notifications: ^17.2.2
+  permission_handler: ^11.3.1
+
+  # Offline / Connectivity
+  connectivity_plus: ^6.0.3
+
+  # Deep Links (password reset)
+  app_links: ^6.3.2
+
+  # Firebase Push Notifications
+  firebase_core: ^3.6.0
+  firebase_messaging: ^15.1.3
+
+  # Animations (Emil Kowalski philosophy — spring physics, stagger, micro-interactions)
+  flutter_animate: ^4.5.0
+  flutter_tts: ^4.2.5
+  share_plus: ^12.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+
+flutter_native_splash:
+  color: "#0d47a1"
+  image: assets/images/app_icon_splash.png
+  android_12:
+    image: assets/images/app_icon_splash.png
+    icon_background_color: "#0d47a1"
+  fullscreen: false
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#1a6fd4"
+  adaptive_icon_foreground: "assets/images/app_icon_adaptive.png"
+  web:
+    generate: false
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
